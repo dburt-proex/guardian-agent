@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guardian-agent"
+version = "1.0.0"
+description = "Deterministic AI governance runtime: VIL signal gate + CASA policy gate (Diffwall rules) + hash-chained audit ledger."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Drew D. Burt"}]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+guardian = "guardian.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["guardian*"]
